@@ -1,5 +1,9 @@
 # We can load .h5 model and save back to Tensorflow format
 
 import tensorflow as tf
-model = tf.keras.models.load_model('model.h5')
-tf.saved_model.save(model, 'saved_model')
+
+# load existing model
+model = tf.keras.models.load_model('2xplus_one.h5')
+
+# save to new name
+tf.saved_model.save(model, '2xplus_one2/1')
